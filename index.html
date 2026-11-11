@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endless Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- The whole game is drawn onto this canvas by the scripts below -->
+  <canvas id="game" width="800" height="300"></canvas>
+  <p class="hint">
+    <strong>Space</strong> to jump (press again in the air to double jump) ·
+    Hold <strong>↓</strong> to crouch · Thunder: stay low, lightning strikes from above!
+  </p>
+
+  <!--
+    Scripts load at the end so the canvas already exists.
+    The ORDER matters: config and utils first (everyone uses them),
+    game.js last (it starts the game once everything is defined).
+  -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/lightning.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/obstacles.js"></script>
+  <script src="js/hud.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
